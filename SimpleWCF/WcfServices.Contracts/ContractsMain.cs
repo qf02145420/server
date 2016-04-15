@@ -9,6 +9,7 @@ namespace WcfServices.Contracts
     public class ContractsMain
     {
     }
+    [ServiceContract]
     public interface ICalculator
     {
         [OperationContract]

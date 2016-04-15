@@ -18,7 +18,7 @@ namespace WcfServices.Hosting
              * ServiceType is HelloWorld
              * BaseAddress is in localhost
              */
-            using (ServiceHost host = new ServiceHost(typeof(CalculatorService), new Uri("http://localhost:8080/calculatorservice")))
+            using (ServiceHost host = new ServiceHost(typeof(CalculatorService), new Uri("http://localhost:808/calculatorservice")))
             {
                 /**
                 * Add an serviceEndpoint to this host
@@ -31,7 +31,7 @@ namespace WcfServices.Hosting
                 {
                     ServiceMetadataBehavior behavior = new ServiceMetadataBehavior();
                     behavior.HttpGetEnabled = true;
-                    behavior.HttpGetUrl = new Uri("http://localhost:8080/calculatorservice");
+                    behavior.HttpGetUrl = new Uri("http://localhost:808/calculatorservice");
                     host.Description.Behaviors.Add(behavior);
                 }
                 host.Opened += delegate
